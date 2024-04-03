@@ -1,0 +1,81 @@
+
+
+.image-parent-div-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+.clip-container{
+    margin-top: 200px;
+    display: flex;
+    flex-direction:row;
+}
+
+.split-image-container{
+    display: flex;
+}
+
+.image-div-container{
+    display: none;
+    position: relative;
+    margin-top: 20px;
+}
+.image-span{
+    position: absolute;
+    left: 0%;
+    top:80%;
+    clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
+    width: 50rem;
+    height: 70vh;
+    background-size: cover;
+}
+
+.uploaded-image-container{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.split-image-button,#choose-file{
+    background: linear-gradient(to left,rgb(227, 227, 227),rgb(220, 220, 220));
+    border: none;
+    font-family: "Montserrat";
+}
+
+.split-image-button{
+    visibility: hidden;
+    border-radius: 20px;
+    width: 8rem;
+    height: 6vh;    
+}
+
+.split-image-button:hover{
+    background: linear-gradient(to left,rgb(180, 180, 180),rgb(161, 161, 161));
+    transition: .2s;
+    cursor: pointer;
+}
+
+#choose-file{
+    gap:20px;
+        border:none;
+    color:black;
+}
+
+.uploaded-img{
+    margin-top: 0px;
+    width: 50rem;
+    height: 70vh;
+}
+
+.image-span:nth-child(2){
+    position: absolute;
+    left: 0%;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+}
+
+
+
+.split-image-button,.reverse-split-image-button{
+    margin-top: 100px;
+}
+
