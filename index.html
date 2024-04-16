@@ -9,6 +9,15 @@
 </head>
 
 <body>
+<header>
+    <div class="page-heading-div">
+            <h3>Upload & Split Image</h3>
+
+    </div>
+</header>
+<br>
+    <div class="parent-container">
+        <h3>Choose File</h3>
 
     <form>
 
@@ -17,16 +26,24 @@
 
     </form>
     <div class="uploaded-image-container">
-        <span class="uploaded-img"></span>
-    </div>        
+        <img src="" class="uploaded-img"></span>
+    </div>
 
-    <div class="image-div-container">
-        <span class="image-span"></span>
-            <span class="image-span"></span>
-            <button class="split-image-button">Split Button</button>
-            </div>
+    <div class="split-input-button-container">
 
-    
+    <input placeholder="choose split value" type="number" min=1 class="select-split-value-input"/>
+    <button class="split-image-button">Split</button>
+    </div>
+
+    <canvas>
+    </canvas>
+    <a href="#" class="canvas-download-image-link" download="my-canvas.png">Download</a> 
+
+    <div class="canvas-container-links">
+    </div>
+
+
+        </div>
     <script src="script.js"></script>
 </body>
 

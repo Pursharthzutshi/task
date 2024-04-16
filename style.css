@@ -1,81 +1,178 @@
-
-
-.image-parent-div-container{
-    display: flex;
-    flex-direction: column;
-    
-}
-.clip-container{
-    margin-top: 200px;
-    display: flex;
-    flex-direction:row;
+body {
+  font-family: "Montserrat";
+  margin: 0;
 }
 
-.split-image-container{
-    display: flex;
+header,
+.page-heading-div {
+  display: flex;
 }
 
-.image-div-container{
-    display: none;
-    position: relative;
-    margin-top: 20px;
+header {
+  align-items: center;
+  background: linear-gradient(
+      to left,
+      rgba(2, 76, 76, 0.859),
+      rgba(0, 50, 44, 0.695)
+    ),
+    url("gallery.png");
+  background-position: center;
+  height: 40%;
+  width: 100%;
 }
-.image-span{
-    position: absolute;
-    left: 0%;
-    top:80%;
-    clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
-    width: 50rem;
-    height: 70vh;
-    background-size: cover;
-}
-
-.uploaded-image-container{
-    display: flex;
-    flex-direction: column;
-   
+.page-heading-div {
+  color: rgb(255, 255, 255);
+  width: 100%;
+  justify-content: center;
 }
 
-.split-image-button,#choose-file{
-    background: linear-gradient(to left,rgb(227, 227, 227),rgb(220, 220, 220));
-    border: none;
-    font-family: "Montserrat";
+.parent-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-parent-div-container {
+  display: flex;
+  flex-direction: column;
+}
+.clip-container {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: row;
 }
 
-.split-image-button{
-    visibility: hidden;
-    border-radius: 20px;
-    width: 8rem;
-    height: 6vh;    
+.split-image-container {
+  display: flex;
 }
 
-.split-image-button:hover{
-    background: linear-gradient(to left,rgb(180, 180, 180),rgb(161, 161, 161));
-    transition: .2s;
-    cursor: pointer;
+.image-div-container {
+  padding: 6px 8px 6px 2px;
+  display: none;
+  position: relative;
+  margin-top: 20px;
+}
+/* .image-span {
+  position: absolute;
+  left: 0%;
+  top: 40%;
+  clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
+  width: 50rem;
+  height: 70vh;
+  background-size: cover;
+} */
+
+.uploaded-image-container {
+  display: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-#choose-file{
-    gap:20px;
-        border:none;
-    color:black;
+/* 
+.split-image-button-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 12vh;
+} */
+
+.split-image-button:hover {
+  background: linear-gradient(to left, rgb(180, 180, 180), rgb(161, 161, 161));
+  transition: 0.2s;
+  cursor: pointer;
 }
 
-.uploaded-img{
-    margin-top: 0px;
-    width: 50rem;
-    height: 70vh;
+#choose-file {
+  gap: 20px;
+  border: none;
+  color: black;
 }
 
-.image-span:nth-child(2){
-    position: absolute;
-    left: 0%;
-    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+.uploaded-img {
+  display: none;
+  width: 800px;
+  height: 500px;
 }
 
-
-
-.split-image-button,.reverse-split-image-button{
-    margin-top: 100px;
+.split-image-button,
+.reverse-split-image-button {
+  margin-top: 100px;
 }
 
+canvas {
+  border: 1px solid black;
+  margin-left:10px;
+  display: none;
+  margin-top: 20px;
+}
+
+.split-input-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-split-value-input {
+  margin-top: 10px;
+  width: 60%;
+  box-shadow: 0.2px 0.2px 12px 0.2px lightgray;
+  border: none;
+  padding: 2px 2px 2px 6px;
+  height: 4vh;
+}
+
+.split-image-button,
+#choose-file,
+.canvas-download-image-link {
+  background: linear-gradient(to left, rgb(227, 227, 227), rgb(220, 220, 220));
+  border: none;
+  font-family: "Montserrat";
+}
+
+.imgObj{
+  border: 1px solid black;
+}
+.split-image-button {
+  margin-top: 10px;
+  margin-left: 20px;
+  display: none;
+  border-radius: 20px;
+  width: 8rem;
+  height: 4vh;
+}
+.canvas-download-image-link,
+.select-split-value-input {
+  display: none;
+}
+
+.canvas-download-image-link {
+  margin-top: 20px;
+  text-decoration: none;
+  color: black;
+  padding: 6px 16px 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.canvas-download-image-link:hover {
+  background: darkgray;
+  transition: 0.2s;
+}
+
+.canvas-container-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.canvas-container-links a {
+  text-decoration: none;
+  color: black;
+  border: 2px solid white;
+  margin-top: 10px;
+  padding: 6px 15px 6px 15px;
+  border-radius: 8px;
+  box-shadow: 0.2px 0.2px 12px 0.2px;
+  background: linear-gradient(to left, rgb(128, 128, 128), rgb(122, 122, 122));
+  color: white;
+}
